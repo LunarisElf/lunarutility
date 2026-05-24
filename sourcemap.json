@@ -38,13 +38,6 @@
               "className": "Folder",
               "children": [
                 {
-                  "name": "AccessoryFixer",
-                  "className": "ModuleScript",
-                  "filePaths": [
-                    "sync/ReplicatedStorage/Lunar@Utility/Section/AccessoryFixer.module.luau"
-                  ]
-                },
-                {
                   "name": "MoonComponents",
                   "className": "ModuleScript",
                   "filePaths": [

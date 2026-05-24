@@ -10,9 +10,7 @@ local LunarUtility = {}
 
 local Typecheck = require(script.Shared.Typecheck)
 local MoonPlayer = require(script.Section.MoonPlayer)
-local AccessoryFixer = require(script.Section.AccessoryFixer)
 
 LunarUtility.MoonPlayer = MoonPlayer :: Typecheck.MoonPlayer
-LunarUtility.AccessoryFixer = AccessoryFixer
 
 return LunarUtility
