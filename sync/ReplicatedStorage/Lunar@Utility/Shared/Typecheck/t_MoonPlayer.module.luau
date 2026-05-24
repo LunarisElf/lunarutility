@@ -121,7 +121,9 @@ export type MoonPlayer = {
 
 	_GetNextValue: typeof(
 
-		function(self: MoonPlayer, oneValue: any): any end
+		function(self: MoonPlayer, oneValue: any): any
+			return nil :: any
+		end
 	),
 	
 	SyncToTrack: typeof(
@@ -142,7 +144,9 @@ export type MoonPlayer = {
 
 	new: typeof(
 
-		function(): MoonPlayer end
+		function(): MoonPlayer
+			return nil :: any
+		end
 	),
 
 	Play: typeof(
@@ -168,13 +172,17 @@ export type MoonPlayer = {
 
 	GetMarkerTrackReachedSignal: typeof(
 
-		function(self: MoonPlayer, name: string): Signal.Signal<...any> end
+		function(self: MoonPlayer, name: string): Signal.Signal<...any> 
+			return nil :: any
+		end
 	),
 	
 	GetMarkerReachedSignal: typeof(
 
-		function(self: MoonPlayer, name: string): Signal.Signal<string> end
-	),
+    function(self: MoonPlayer, name: string): Signal.Signal<string>
+        return nil :: any  -- dummy return to satisfy the type checker
+    end
+),
 
 	--TimeframeWait: typeof( -- <<<<<<<<<<<<<<<<<<<< #TODO move to the main module
 		-- does not work as of right now
@@ -207,15 +215,21 @@ export type MoonPlayer = {
 	),
 
 	_GetZeroAndOneKeyframe: typeof(
-		function(self: MoonPlayer, propertyData, Time: number): (number, number) end
+		function(self: MoonPlayer, propertyData, Time: number): (number, number) 
+			return 0, 0 :: any
+		end
 	),
 
 	_NewSortedKeyframe: typeof(
-		function(self: MoonPlayer, Table): {[number]: number} end
+		function(self: MoonPlayer, Table): {[number]: number} 
+			return nil :: any
+		end
 	),
 
 	_GetAlphaValue: typeof(
-		function(self: MoonPlayer, TimeAlpha: number, KeyframeData): number end
+		function(self: MoonPlayer, TimeAlpha: number, KeyframeData): number
+			return nil :: any
+		end
 	),
 
 	_DebugWarn: typeof(
@@ -227,7 +241,9 @@ export type MoonPlayer = {
 	),
 
 	_GetNewCFrameValue: typeof(
-		function(self: MoonPlayer, keyframeTable, object: Instance, value: CFrame): CFrame end
+		function(self: MoonPlayer, keyframeTable, object: Instance, value: CFrame): CFrame 
+			return nil :: any
+		end
 	),
 
 	_LinkOne: typeof(
@@ -256,4 +272,4 @@ export type MoonPlayer = {
 
 }
 
-return nil
+return {}
